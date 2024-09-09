@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Feature Prediction App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .container {
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            padding: 20px;
+            border: 5px solid red;
+            border-image: linear-gradient(to right, red, yellow);
+            border-image-slice: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mycont mt-5">
+        <h1 class="text-center">Prediction and Analysis App</h1>
+        <form action="/recommend" method="post">
+            <!-- Add your form fields here -->
+            <h2>Diet and Workout Recommendations</h2>
+            <button type="submit" class="btn btn-danger btn-lg">Get Recommendations</button>
+        </form>
+        <form action="/sentiment_usa" method="post">
+            <h2>USA Sentiment Analysis</h2>
+            <textarea name="text" class="form-control" rows="3" placeholder="Enter text"></textarea>
+            <button type="submit" class="btn btn-danger btn-lg mt-2">Analyze Sentiment</button>
+        </form>
+        <form action="/sentiment_india" method="post">
+            <h2>India Sentiment Analysis</h2>
+            <textarea name="text" class="form-control" rows="3" placeholder="Enter text"></textarea>
+            <button type="submit" class="btn btn-danger btn-lg mt-2">Analyze Sentiment</button>
+        </form>
+        <form action="/financial" method="post">
+            <h2>Financial Data Extraction</h2>
+            <input type="text" name="company" class="form-control" placeholder="Enter Company Name">
+            <button type="submit" class="btn btn-danger btn-lg mt-2">Get Revenue</button>
+        </form>
+        <form action="/churn" method="post">
+            <h2>Churn Prediction</h2>
+            <input type="number" name="feature1" class="form-control" placeholder="Feature 1">
+            <input type="number" name="feature2" class="form-control mt-2" placeholder="Feature 2">
+            <button type="submit" class="btn btn-danger btn-lg mt-2">Predict Churn</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
