@@ -85,7 +85,7 @@ def recommend():
             'young_female': "Balanced diet with cardio exercises.",
             'adult_male': "Low-carb diet with moderate cardio and strength training.",
             'adult_female': "Low-fat diet with a mix of cardio and strength training.",
-           
+        }
 
         if age < 30 and gender == 'male':
             recommendation = recommendations.get('young_male', "General advice: Eat healthy and exercise regularly.")
